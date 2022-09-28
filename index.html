@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./develop/css/style.css">
+    <title>Camp JRNL</title>
+</head>
 
+<body>
+    <header class="main-content">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#container">Search Campsites</a></li>
+                <li><a href="#container">View Saved Sites</a></li>
+                <li><a href="#container">Give Your Review</a></li>
+            </ul>
+        </nav>
+        <section class="header">
+            <h1>NATURE</h1>
+            <h1>FREEDOM</h1>
+            <h1>CAMP JRNL. <span>YOUR ONE STOP CAMPSITE FINDER</span></h1>
+        </section>
+    </header>
+    <main>
+        <!--this creates the next 3 project sections-->
+        <!--each individual project is contained within an article-->
+        <!--the group of container/articles is all nested into a section-->
+        <section id="container" class="panel">
+            <article class="filter">
+                <input type="text" placeholder="Weather"/>
+                <input type="text" placeholder="Distance"/>
+                <button class="view-button">Submit</button>
+            </article>
+
+            <article class="filter">
+                <img src="assets/images/map-of-canada.png"/>
+                <span class="title">Map Of Canada</span>
+                <a href="#/" class="view-button">View</a>
+            </article>
+        </section>
+
+        <section class="selected-sites">
+            <div class="site">
+                <img src="assets/images/image-icon.png" alt="image-icon"/>
+                <span>Site</span>
+            </div>
+            <div class="site">
+                <img src="assets/images/image-icon.png" alt="image-icon"/>
+                <span>Site</span>
+            </div>
+            <div class="site">
+                <img src="assets/images/image-icon.png" alt="image-icon"/>
+                <span>Site</span>
+            </div>
+            <div class="site">
+                <img src="assets/images/image-icon.png" alt="image-icon"/>
+                <span>Site</span>
+            </div>
+            <div class="site">
+                <img src="assets/images/image-icon.png" alt="image-icon"/>
+                <span>Site</span>
+            </div>
+        </section>
+    </main>
+    
+    <!--this creates the footer of the webpage-->
+    <footer>
+        <h2>@2022 Camp JRNL</h2>
+    </footer>
+  
+
+
+
+
+
+    <script src="./develop/js/script.js"></script>
+</body>
+</html>
