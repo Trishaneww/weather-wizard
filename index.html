@@ -1,82 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./develop/css/style.css">
-    <title>Camp JRNL</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='./develop/css/reset.css'>
+  <link href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet'>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous'>
+  <link rel='stylesheet' href='./develop/css/style.css'>
+  <title>Weather Wizard</title>
 </head>
-
 <body>
-    <header class="main-content">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#container">Search Campsites</a></li>
-                <li><a href="#container">View Saved Sites</a></li>
-                <li><a href="#container">Give Your Review</a></li>
-            </ul>
-        </nav>
-        <section class="header">
-            <h1>NATURE</h1>
-            <h1>FREEDOM</h1>
-            <h1>CAMP JRNL. <span>YOUR ONE STOP CAMPSITE FINDER</span></h1>
-        </section>
-    </header>
-    <main>
-        <!--this creates the next 3 project sections-->
-        <!--each individual project is contained within an article-->
-        <!--the group of container/articles is all nested into a section-->
-        <section id="container" class="panel">
-            <article class="filter">
-                <input type="text" placeholder="Weather"/>
-                <input type="text" placeholder="Distance"/>
-                <button class="view-button">Submit</button>
-            </article>
+  <nav class='navbar navbar-expand-lg color'>
+    <div class='container-fluid'>
+      <h1 class='navbar-brand'>Weather Wizard</h1>
+      <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+          <li class='nav-item d-flex' >
+            <a class='nav-link active' aria-current='page' href='#' id='toronto'>Mississauga</a>
+            <a class='nav-link active' aria-current='page' href='#' id='saved-0'></a>
+            <a class='nav-link active' aria-current='page' href='#' id='saved-1'></a>
+            <a class='nav-link active' aria-current='page' href='#' id='saved-2'></a>
+          </li>
+          <li></li>
+        </ul>
+        <form class='d-flex' role='search'>
+          <input class='search-input' type='search' placeholder='Search' aria-label='Search' id='search-text'>
+          <button class='search-button' type='submit' id='search'>Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <button class='button' type='submit' id='save-city'>Save this city</button>
+  <!-- Current day weather -->
+  <section id='day-weather'>
+    <h1>Weather Forecast</h1>
+    <h2 id='date'></h2>
+    <h2 id='city'>Mississauga</h2>
+    <ul class='list'>
+      <li id='icon-lrg'></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</section>
+  <!-- 5-day forecast -->
+<section class='px-5 py-4 d-flex' id='weather-cards'>
+  <div class='card' style='width: 18rem;'>
+    <h2 id='icon-0' class='card-icon'></h2>
+    <div class='card-body'>
+      <h5 class='card-title' id='weekday-0'></h5>
+      </div>
+    <ul class='list-group list-group-flush' id='day-0'>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+    </ul>
+  </div>
+  <div class='card' style='width: 18rem;'>
+    <h2 id='icon-1' class='card-icon'></h2>
+    <div class='card-body'>
+      <h5 class='card-title' id='weekday-1'></h5>
+      </div>
+    <ul class='list-group list-group-flush' id='day-1'>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+    </ul>
+  </div>
+  <div class='card' style='width: 18rem;'>
+    <h2 id='icon-2' class='card-icon'></h2>
+    <div class='card-body'>
+      <h5 class='card-title' id='weekday-2'></h5>
+      </div>
+    <ul class='list-group list-group-flush' id='day-2'>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+    </ul>
+  </div>
+  <div class='card' style='width: 18rem;'>
+    <h2 id='icon-3' class='card-icon'></h2>
+    <div class='card-body'>
+      <h5 class='card-title' id='weekday-3'></h5>
+    </div>
+    <ul class='list-group list-group-flush' id='day-3'>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+    </ul>
+  </div>
+  <div class='card' style='width: 18rem;'>
+    <h2 id='icon-4' class='card-icon'></h2>
+    <div class='card-body'>
+      <h5 class='card-title' id='weekday-4'></h5>
+      </div>
+    <ul class='list-group list-group-flush' id='day-4'>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+      <li class='list-group-item'></li>
+    </ul>
+  </div>
+</section>
 
-            <article class="filter">
-                <img src="assets/images/map-of-canada.png"/>
-                <span class="title">Map Of Canada</span>
-                <a href="#/" class="view-button">View</a>
-            </article>
-        </section>
-
-        <section class="selected-sites">
-            <div class="site">
-                <img src="assets/images/image-icon.png" alt="image-icon"/>
-                <span>Site</span>
-            </div>
-            <div class="site">
-                <img src="assets/images/image-icon.png" alt="image-icon"/>
-                <span>Site</span>
-            </div>
-            <div class="site">
-                <img src="assets/images/image-icon.png" alt="image-icon"/>
-                <span>Site</span>
-            </div>
-            <div class="site">
-                <img src="assets/images/image-icon.png" alt="image-icon"/>
-                <span>Site</span>
-            </div>
-            <div class="site">
-                <img src="assets/images/image-icon.png" alt="image-icon"/>
-                <span>Site</span>
-            </div>
-        </section>
-    </main>
-    
-    <!--this creates the footer of the webpage-->
-    <footer>
-        <h2>@2022 Camp JRNL</h2>
-    </footer>
-  
-
-
-
-
-
-    <script src="./develop/js/script.js"></script>
+  <footer>@2022 Weather Wizard</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8' crossorigin='anonymous'></script>
+  <script src='./develop/js/script.js'></script>
 </body>
 </html>
