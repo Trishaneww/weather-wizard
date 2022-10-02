@@ -18,7 +18,7 @@ body {
 }
 
 #save-city {
-  margin-left: 900px;
+  margin-left: 47%;
 }
 
 #day-weather {
@@ -74,7 +74,7 @@ a:hover {
 }
 
 
-.button:hover, .search-input:hover, .search-button:hover {
+.button:hover, .search-input:hover, .search-button:hover, .search-input:active {
   background-color: #ffbcb1;
   color:whitesmoke;
 }
@@ -82,7 +82,6 @@ a:hover {
 footer {
   margin-bottom: 30px;
 }
-
 
 #weather-cards {
   text-align: center;
@@ -99,8 +98,17 @@ footer {
   margin-bottom: 40px;
 }
 
+
+.navbar-toggler-icon {
+  background-color: #918887;
+}
 @media (max-width: 900px) {
   #save-city {
     margin-left: 150px;
   }
+  #weather-cards {
+    flex-direction: column;
+    margin: 0px;
+  }
+  
 }
