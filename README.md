@@ -10,7 +10,10 @@ As technology contiunues to advance, people of all kinds have become increasingl
 - Displays weather forecast for user
 - User can search a city to view its weather
 
+![screenshot](develop/images/weather-wizard-ss)
+
 Link to [Live Website](https://trishaneww.github.io/weather-wizard/)
+
 
 ## Credit
 
