@@ -139,6 +139,7 @@ function set_direction (direction) { // Set wind direction
   return direction;
 }
 
+
 function weather_icon (skies) {
   if (skies === 'Rain') { // Checks and sets icons
     return '🌧'; // Set icon to rain
