@@ -14,7 +14,6 @@ As technology contiunues to advance, people of all kinds have become increasingl
 
 Link to [Live Website](https://trishaneww.github.io/weather-wizard/)
 
-
 ## Credit
 
 ### Trishane Wijeyawickrema
