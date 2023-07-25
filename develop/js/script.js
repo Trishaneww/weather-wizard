@@ -13,7 +13,6 @@ document.getElementById('date').innerHTML = moment().format('dddd, MMMM Do, YYYY
 
 load_tabs();
 fill_main(cityDefault);
-
 search.addEventListener('click', (e) => { // Search for city
   e.preventDefault();
   citySearch = document.getElementById('search-text');
